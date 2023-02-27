@@ -9,11 +9,152 @@ body {
   height: 100%;
   margin: 0;
   justify-content: center;
-  flex-direction: column;
+  overflow: hidden;
 }
 .container {
   display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /*animation: move 25s;
+  animation-timing-function: steps(1);*/
+}
+/*.container:hover {
+  animation-play-state: paused;
+}*/
+.yandex_logo {
+  display: flex;
   flex-direction: row;
   justify-content: center;
-  height: 153px;
+  align-items: center;
+  /*animation: slideshow 5s;
+  animation-fill-mode: forwards;*/
+}
+.yandex_logo::after {
+  animation-play-state: paused;
+}
+.product {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
+  /* top: 100%;
+  position: absolute;
+  animation: slideshow;
+  opacity: 0;
+  animation-delay: 6s;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;*/
+}
+.yandex {
+  padding: 17px 36.33px 0 0;
+}
+.logo {
+  animation-name: logo;
+  animation-duration: 1s;
+  animation-delay: 2s;
+  padding-bottom: 1px;
+}
+.market {
+  padding: 20px 0 0 38.47px;
+}
+.pils_left {
+  margin: 0 0 0 15px;
+  position: absolute;
+  z-index: 100;
+}
+.sheet_left {
+  padding-top: 40px;
+  position: relative;
+  z-index: -1;
+}
+.pils_right {
+  margin: 0 0 0 -163px;
+  position: absolute;
+  z-index: 100;
+}
+.sheet_right {
+  padding-top: 40px;
+  position: relative;
+  z-index: -1;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  font-family: "Yandex Sans";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 114px;
+  line-height: 80%;
+  color: #ffffff;
+}
+h2 {
+  font-family: "Yandex Sans";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 90%;
+  display: flex;
+  align-items: center;
+  letter-spacing: -0.02em;
+
+  color: #ffffff;
+
+  opacity: 0.5;
+}
+@keyframes slideshow {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes move {
+  25% {
+    transform: translateY(-100%);
+  }
+  50% {
+    transform: translateY(-100%);
+  }
+  75% {
+    transform: translateY(-100%);
+  }
+  100% {
+    transform: translateY(-100%);
+  }
+}
+@keyframes logo {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+@font-face {
+  font-family: "Yandex Sans";
+  src: local("Yandex Sans Display Regular"),
+    local("Yandex-Sans-Display-Regular"),
+    url("./assets/fonts/YandexSansDisplay-Regular.woff2") format("woff2"),
+    url("./assets/fonts/YandexSansDisplay-Regular.woff") format("woff"),
+    url("./assets/fonts/YandexSansDisplay-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Yandex Sans";
+  src: local("Yandex Sans Text Light"), local("Yandex-Sans-Text-Light"),
+    url("./assets/fonts/YandexSansText-Light.woff2") format("woff2"),
+    url("./assets/fonts/YandexSansText-Light.woff") format("woff"),
+    url("./assets/fonts/YandexSansText-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
 }
