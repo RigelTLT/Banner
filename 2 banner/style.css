@@ -241,6 +241,12 @@ body {
   padding-top: 12px;
   word-spacing: 1px;
 }
+.sheet_left,
+.sheet_left_slide_two {
+  animation: sheet_move 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
 @keyframes slideshow {
   0% {
     opacity: 0;
