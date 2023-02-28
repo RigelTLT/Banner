@@ -187,6 +187,63 @@ body {
   position: absolute;
   z-index: -1;
 }
+.information {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 88px;
+  padding-top: 6px;
+}
+.limitation {
+  height: 88px;
+  width: 88px;
+  opacity: 0.5;
+  border: 3.46698px solid #ffffff;
+  border-radius: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-left: 9px;
+}
+.limitation_text {
+  font-family: "Yandex Sans Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 41.6037px;
+  line-height: 49px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  font-feature-settings: "pnum" on, "lnum" on;
+  color: #ffffff;
+}
+.requisites_text {
+  font-family: "Yandex Sans Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 38px;
+  line-height: 100%;
+  letter-spacing: -0.02em;
+  color: #ffffff;
+  opacity: 0.5;
+  padding-left: 17px;
+}
+.warning_text {
+  font-family: "Yandex Sans Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 91px;
+  line-height: 100%;
+  letter-spacing: -6px;
+  text-transform: uppercase;
+  color: #ffffff;
+  margin: 0;
+  padding-left: 9px;
+  opacity: 0.5;
+  padding-top: 12px;
+  word-spacing: 1px;
+}
 @keyframes slideshow {
   0% {
     opacity: 0;
