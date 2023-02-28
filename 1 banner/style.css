@@ -15,8 +15,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*animation: move 25s;
-  animation-timing-function: steps(1);*/
+  animation: move 25s;
+  animation-timing-function: steps(1);
 }
 /*.container:hover {
   animation-play-state: paused;
@@ -25,29 +25,39 @@ body {
   max-height: 250px;
 }
 .yandex_logo {
+  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /*animation: slideshow 5s;
-  animation-fill-mode: forwards;*/
+  top: 135%;
+  animation: slideshow 5s;
+  animation-fill-mode: forwards;
 }
 .yandex_logo::after {
   animation-play-state: paused;
 }
+.product,
+.delivery,
+.additional_information
+{
+  position: relative;
+  /*animation: slideshow;
+  opacity: 0;
+  animation-delay: 6s;
+  animation-duration: 10s;
+  animation-fill-mode: forwards;*/
+}
+.additional_information{
+top:435%;
+}
 .product {
+  top: 235%;
   display: flex;
   flex-direction: row;
   align-content: center;
   align-items: center;
   padding-right: 85px;
-  /* top: 100%;
-  position: absolute;
-  animation: slideshow;
-  opacity: 0;
-  animation-delay: 6s;
-  animation-duration: 10s;
-  animation-fill-mode: forwards;*/
 }
 .yandex {
   padding: 17px 36.33px 0 0;
@@ -146,6 +156,7 @@ body {
   letter-spacing: -3px;
 }
 .delivery {
+  top:335%;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -258,16 +269,16 @@ body {
 
 @keyframes move {
   25% {
-    transform: translateY(-100%);
+    transform: translateY(-175%);
   }
   50% {
-    transform: translateY(-100%);
+    transform: translateY(-375%);
   }
   75% {
-    transform: translateY(-100%);
+    transform: translateY(-575%);
   }
   100% {
-    transform: translateY(-100%);
+    transform: translateY(0%);
   }
 }
 @keyframes logo {
@@ -432,7 +443,7 @@ body {
   font-weight: 500;
   font-style: normal;
 }
-@media (max-width: 2799px) {
+/*@media (max-width: 2799px) {
   .market {
     width: 29%;
     padding: 5px 0 0 20px;
@@ -444,5 +455,17 @@ body {
   .logo {
     width: 9%;
     padding: 0px 0px 7px 0px;
+  }
+  .title_product {
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 90%;
+    text-align: center;
+  }
+  .sign_slide_one {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    letter-spacing: -0.02em;
   }
 }
