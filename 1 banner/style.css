@@ -15,12 +15,11 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  animation: move 25s;
+  animation: move 20s;
   animation-timing-function: steps(1);
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
 }
-/*.container:hover {
-  animation-play-state: paused;
-}*/
 .container_content {
   max-height: 250px;
 }
@@ -33,6 +32,7 @@ body {
   top: 135%;
   animation: slideshow 5s;
   animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
 }
 .yandex_logo::after {
   animation-play-state: paused;
@@ -42,22 +42,21 @@ body {
 .additional_information
 {
   position: relative;
-  /*animation: slideshow;
   opacity: 0;
-  animation-delay: 6s;
-  animation-duration: 10s;
-  animation-fill-mode: forwards;*/
+  animation: slideshow 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
 }
 .additional_information{
-top:435%;
+  top: 446%;
 }
 .product {
-  top: 235%;
+  top: 234%;
   display: flex;
   flex-direction: row;
   align-content: center;
   align-items: center;
-  padding-right: 85px;
+  padding-left: 63px;
 }
 .yandex {
   padding: 17px 36.33px 0 0;
@@ -80,6 +79,15 @@ top:435%;
   z-index: 100;
   right: 11px;
 }
+.sheet_left,
+.sheet_right,
+.sheet_right_slide_two,
+.sheet_left_slide_two
+{
+  animation: sheet_move 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+}
 .sheet_left {
   padding-top: 40px;
   position: absolute;
@@ -99,6 +107,7 @@ top:435%;
   margin-left: 146px;
   position: absolute;
   z-index: -1;
+  
 }
 .text {
   display: flex;
@@ -161,6 +170,7 @@ top:435%;
   flex-direction: row;
   align-content: center;
   align-items: center;
+  padding-left: 20px;
 }
 .left_img_slide_two {
   margin-bottom: -3px;
@@ -268,6 +278,9 @@ top:435%;
 }
 
 @keyframes move {
+  0% {
+    transform: translateY(0%);
+  }
   25% {
     transform: translateY(-175%);
   }
@@ -288,6 +301,18 @@ top:435%;
 
   to {
     transform: rotate(360deg);
+  }
+}
+@keyframes sheet_move {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  50% {
+    transform: rotate(20deg);
+  }
+  100% {
+    transform: rotate(0deg);
   }
 }
 @font-face {
