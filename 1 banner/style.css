@@ -34,20 +34,16 @@ body {
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
-.yandex_logo::after {
-  animation-play-state: paused;
-}
 .product,
 .delivery,
-.additional_information
-{
+.additional_information {
   position: relative;
   opacity: 0;
   animation: slideshow 5s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
-.additional_information{
+.additional_information {
   top: 446%;
 }
 .product {
@@ -82,8 +78,7 @@ body {
 .sheet_left,
 .sheet_right,
 .sheet_right_slide_two,
-.sheet_left_slide_two
-{
+.sheet_left_slide_two {
   animation: sheet_move 2s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -107,7 +102,6 @@ body {
   margin-left: 146px;
   position: absolute;
   z-index: -1;
-  
 }
 .text {
   display: flex;
@@ -165,7 +159,7 @@ body {
   letter-spacing: -3px;
 }
 .delivery {
-  top:335%;
+  top: 335%;
   display: flex;
   flex-direction: row;
   align-content: center;
@@ -467,30 +461,4 @@ body {
     url("./assets/fonts/YandexSansText-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
-}
-/*@media (max-width: 2799px) {
-  .market {
-    width: 29%;
-    padding: 5px 0 0 20px;
-  }
-  .yandex {
-    width: 28%;
-    padding: 6px 19.79px 0 0;
-  }
-  .logo {
-    width: 9%;
-    padding: 0px 0px 7px 0px;
-  }
-  .title_product {
-    font-weight: 900;
-    font-size: 70px;
-    line-height: 90%;
-    text-align: center;
-  }
-  .sign_slide_one {
-    font-size: 22px;
-    display: flex;
-    align-items: center;
-    letter-spacing: -0.02em;
-  }
 }

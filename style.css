@@ -1,4 +1,14 @@
+.banners {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
 .one {
   width: 2800px;
+  height: 250px;
+}
+.two {
+  width: 850px;
   height: 250px;
 }
