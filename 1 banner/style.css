@@ -432,3 +432,17 @@ body {
   font-weight: 500;
   font-style: normal;
 }
+@media (max-width: 2799px) {
+  .market {
+    width: 29%;
+    padding: 5px 0 0 20px;
+  }
+  .yandex {
+    width: 28%;
+    padding: 6px 19.79px 0 0;
+  }
+  .logo {
+    width: 9%;
+    padding: 0px 0px 7px 0px;
+  }
+}
