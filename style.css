@@ -16,6 +16,14 @@
   width: 850px;
   height: 250px;
 }
+.two_max {
+  width: 540px;
+  height: 180px;
+}
+.two_min {
+  width: 320px;
+  height: 180px;
+}
 .three {
   width: 300px;
   height: 600px;
