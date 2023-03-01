@@ -4,11 +4,15 @@
   justify-content: center;
   align-items: flex-start;
 }
-.one {
+.one_max {
   width: 2800px;
   height: 250px;
 }
-.two {
+.one_adptive {
+  width: 850px;
+  height: 250px;
+}
+.one_min {
   width: 850px;
   height: 250px;
 }
