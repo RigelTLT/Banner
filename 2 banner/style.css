@@ -279,7 +279,7 @@ body {
     transform: translateY(0%);
   }*/
   100% {
-    transform: translateY(-575%);
+    transform: translateY(-175%);
   }
 }
 @keyframes logo {
@@ -455,4 +455,60 @@ body {
     url("./assets/fonts/YandexSansText-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
+}
+@media (max-width: 539px) {
+  .pils_right,
+  .pils_right_slide_two {
+    display: none;
+  }
+  .pils_right_min,
+  .pils_right_slide_two_min {
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+  .yandex_logo {
+    top: 163%;
+  }
+  .yandex {
+    width: 36%;
+    padding: 6px 7.47px 0 0;
+  }
+  .logo {
+    width: 12%;
+  }
+  .market {
+    width: 37%;
+    padding: 0px 0 0 8.3px;
+  }
+  .text {
+    max-width: 187px;
+  }
+  .title_product {
+    font-weight: 900;
+    font-size: 33px;
+    line-height: 90%;
+    padding: 4px 0px 0 3px;
+  }
+  .sign_slide_one {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 90%;
+    position: relative;
+    top: 22px;
+    margin: 29px 41px 0px 1px;
+  }
+  .product {
+    top: 278%;
+  }
+  .pils_right_min {
+    right: 3px;
+  }
+  .sheet_right {
+    position: absolute;
+    width: 38%;
+    top: 61px;
+    right: 46px;
+    transform: rotate(251deg);
+  }
 }
