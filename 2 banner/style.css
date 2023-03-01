@@ -16,38 +16,32 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  /*animation: move 20s;
+  animation: move 20s;
   animation-timing-function: steps(1);
   animation-fill-mode: forwards;
-  animation-iteration-count: infinite;*/
-  animation: move 1s;
-  animation-timing-function: steps(1);
-  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
 }
 .container_content {
   max-height: 250px;
 }
 .yandex_logo {
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   top: 132%;
   align-items: flex-end;
   padding-top: 10px;
-  /*animation: slideshow 5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;*/
 }
 
+.yandex_logo,
 .product,
 .delivery,
 .additional_information {
   position: relative;
-  /*animation: slideshow 5s;
+  animation: slideshow 5s;
   animation-fill-mode: forwards;
   opacity: 0;
-  animation-iteration-count: infinite;*/
+  animation-iteration-count: infinite;
 }
 .additional_information {
   top: 458%;
@@ -244,12 +238,12 @@ body {
   padding-top: 12px;
   word-spacing: 1px;
 }
-/*.sheet_right,
+.sheet_right,
 .sheet_right_slide_two {
   animation: sheet_move 2s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-}*/
+}
 @keyframes slideshow {
   0% {
     opacity: 0;
@@ -266,7 +260,7 @@ body {
   0% {
     transform: translateY(0%);
   }
-  /*25% {
+  25% {
     transform: translateY(-175%);
   }
   50% {
@@ -277,9 +271,6 @@ body {
   }
   100% {
     transform: translateY(0%);
-  }*/
-  100% {
-    transform: translateY(-175%);
   }
 }
 @keyframes logo {
@@ -301,6 +292,18 @@ body {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+@keyframes sheet_move_right {
+  0% {
+    transform: rotate(251deg);
+  }
+
+  50% {
+    transform: rotate(271deg);
+  }
+  100% {
+    transform: rotate(251deg);
   }
 }
 @font-face {
@@ -468,7 +471,7 @@ body {
     z-index: 100;
   }
   .yandex_logo {
-    top: 163%;
+    top: 128%;
   }
   .yandex {
     width: 36%;
@@ -499,7 +502,7 @@ body {
     margin: 29px 41px 0px 1px;
   }
   .product {
-    top: 278%;
+    top: 251%;
   }
   .pils_right_min {
     right: 3px;
@@ -510,5 +513,75 @@ body {
     top: 61px;
     right: 46px;
     transform: rotate(251deg);
+  }
+  .title_delivery {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 90%;
+    padding-right: 0;
+    max-width: 175px;
+    word-spacing: -1px;
+  }
+  .sign_slide_two {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 90%;
+    position: relative;
+    top: 43px;
+    letter-spacing: -1.5px;
+  }
+  .delivery {
+    top: 364%;
+  }
+  .text_slide_two {
+    left: 6px;
+    top: 0px;
+  }
+  .pils_right_slide_two_min {
+    top: 11px;
+    left: 15px;
+  }
+  .sheet_right_slide_two {
+    position: absolute;
+    width: 38%;
+    top: 63px;
+    right: 57px;
+    transform: rotate(251deg);
+  }
+  .content_information {
+    padding: 41px 0 0 27px;
+  }
+  .additional_information {
+    top: 470%;
+  }
+  .requisites_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 104%;
+    letter-spacing: -0.05em;
+  }
+  .warning_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    padding-right: 33px;
+    line-height: 100%;
+    letter-spacing: -2.7px;
+  }
+  .limitation {
+    height: 28px;
+    width: 28px;
+    right: 29px;
+    bottom: 5px;
+    position: absolute;
+  }
+  .sheet_right,
+  .sheet_right_slide_two {
+    animation: sheet_move_right 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
   }
 }
