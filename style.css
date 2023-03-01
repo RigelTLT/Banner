@@ -1,8 +1,26 @@
+body {
+  background: #303030;
+  margin: 0;
+}
+iframe {
+  border: 0;
+}
+p {
+  font-family: "Yandex Sans Text";
+  font-weight: bold;
+  font-style: normal;
+  color: white;
+  font-size: 40px;
+  padding-left: 20px;
+}
 .banners {
+  background: #1e1e1e;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-content: center;
   align-items: flex-start;
+  margin: 0px 5%;
 }
 .one_max {
   width: 2800px;
@@ -27,4 +45,18 @@
 .three {
   width: 300px;
   height: 600px;
+}
+
+@font-face {
+  font-family: "Yandex Sans Text";
+  src: url("./3 banner/assets/fonts/YandexSansText-Bold.eot");
+  src: local("Yandex Sans Text Bold"),
+    local("./3 banner/assets/fonts/YandexSansText-Bold"),
+    url("./3 banner/assets/fonts/YandexSansText-Bold.eot?#iefix")
+      format("embedded-opentype"),
+    url("./3 banner/assets/fonts/YandexSansText-Bold.woff2") format("woff2"),
+    url("./3 banner/assets/fonts/YandexSansText-Bold.woff") format("woff"),
+    url("./3 banner/assets/fonts/YandexSansText-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
 }
