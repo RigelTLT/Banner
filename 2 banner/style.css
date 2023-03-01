@@ -33,16 +33,6 @@ body {
   padding-top: 10px;
 }
 
-.yandex_logo,
-.product,
-.delivery,
-.additional_information {
-  position: relative;
-  animation: slideshow 5s;
-  animation-fill-mode: forwards;
-  opacity: 0;
-  animation-iteration-count: infinite;
-}
 .additional_information {
   top: 458%;
 }
@@ -75,10 +65,7 @@ body {
 .img {
   margin-bottom: -16px;
 }
-.pils_right_min,
-.pils_right_slide_two_min {
-  display: none;
-}
+
 .pils_right {
   position: relative;
   z-index: 100;
@@ -126,21 +113,6 @@ body {
   opacity: 0.5;
   letter-spacing: -2px;
 }
-.sign_slide_two {
-  font-family: "Yandex Sans Text";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 90%;
-  display: flex;
-  color: #ffffff;
-  opacity: 0.5;
-  margin: 17px 0 0 0;
-  letter-spacing: -2.5px;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: flex-end;
-}
 .delivery {
   top: 358%;
   display: flex;
@@ -170,6 +142,21 @@ body {
   position: relative;
   bottom: 12px;
   left: 34px;
+}
+.sign_slide_two {
+  font-family: "Yandex Sans Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 90%;
+  display: flex;
+  color: #ffffff;
+  opacity: 0.5;
+  margin: 17px 0 0 0;
+  letter-spacing: -2.5px;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-end;
 }
 .content_information {
   padding: 32px 0 0 33px;
@@ -244,6 +231,20 @@ body {
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
+.yandex_logo,
+.product,
+.delivery,
+.additional_information {
+  position: relative;
+  animation: slideshow 5s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  animation-iteration-count: infinite;
+}
+.pils_right_min,
+.pils_right_slide_two_min {
+  display: none;
+}
 @keyframes slideshow {
   0% {
     opacity: 0;
@@ -304,6 +305,132 @@ body {
   }
   100% {
     transform: rotate(251deg);
+  }
+}
+@media (max-width: 539px) {
+  .pils_right,
+  .pils_right_slide_two {
+    display: none;
+  }
+  .pils_right_min,
+  .pils_right_slide_two_min {
+    display: block;
+    position: relative;
+    z-index: 100;
+  }
+  .yandex_logo {
+    top: 128%;
+  }
+  .yandex {
+    width: 36%;
+    padding: 6px 7.47px 0 0;
+  }
+  .logo {
+    width: 12%;
+  }
+  .market {
+    width: 37%;
+    padding: 0px 0 0 8.3px;
+  }
+  .text {
+    max-width: 187px;
+  }
+  .title_product {
+    font-weight: 900;
+    font-size: 33px;
+    line-height: 90%;
+    padding: 4px 0px 0 3px;
+  }
+  .sign_slide_one {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 90%;
+    position: relative;
+    top: 22px;
+    margin: 29px 41px 0px 1px;
+  }
+  .product {
+    top: 251%;
+  }
+  .pils_right_min {
+    right: 3px;
+  }
+  .sheet_right {
+    position: absolute;
+    width: 38%;
+    top: 61px;
+    right: 46px;
+    transform: rotate(251deg);
+  }
+  .title_delivery {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 26px;
+    line-height: 90%;
+    padding-right: 0;
+    max-width: 175px;
+    word-spacing: -1px;
+  }
+  .sign_slide_two {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 90%;
+    position: relative;
+    top: 43px;
+    letter-spacing: -1.5px;
+  }
+  .delivery {
+    top: 364%;
+  }
+  .text_slide_two {
+    left: 6px;
+    top: 0px;
+  }
+  .pils_right_slide_two_min {
+    top: 11px;
+    left: 15px;
+  }
+  .sheet_right_slide_two {
+    position: absolute;
+    width: 38%;
+    top: 63px;
+    right: 57px;
+    transform: rotate(251deg);
+  }
+  .content_information {
+    padding: 41px 0 0 27px;
+  }
+  .additional_information {
+    top: 470%;
+  }
+  .requisites_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 104%;
+    letter-spacing: -0.05em;
+  }
+  .warning_text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 26px;
+    padding-right: 33px;
+    line-height: 100%;
+    letter-spacing: -2.7px;
+  }
+  .limitation {
+    height: 28px;
+    width: 28px;
+    right: 29px;
+    bottom: 5px;
+    position: absolute;
+  }
+  .sheet_right,
+  .sheet_right_slide_two {
+    animation: sheet_move_right 2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
   }
 }
 @font-face {
@@ -458,130 +585,4 @@ body {
     url("./assets/fonts/YandexSansText-Medium.ttf") format("truetype");
   font-weight: 500;
   font-style: normal;
-}
-@media (max-width: 539px) {
-  .pils_right,
-  .pils_right_slide_two {
-    display: none;
-  }
-  .pils_right_min,
-  .pils_right_slide_two_min {
-    display: block;
-    position: relative;
-    z-index: 100;
-  }
-  .yandex_logo {
-    top: 128%;
-  }
-  .yandex {
-    width: 36%;
-    padding: 6px 7.47px 0 0;
-  }
-  .logo {
-    width: 12%;
-  }
-  .market {
-    width: 37%;
-    padding: 0px 0 0 8.3px;
-  }
-  .text {
-    max-width: 187px;
-  }
-  .title_product {
-    font-weight: 900;
-    font-size: 33px;
-    line-height: 90%;
-    padding: 4px 0px 0 3px;
-  }
-  .sign_slide_one {
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 90%;
-    position: relative;
-    top: 22px;
-    margin: 29px 41px 0px 1px;
-  }
-  .product {
-    top: 251%;
-  }
-  .pils_right_min {
-    right: 3px;
-  }
-  .sheet_right {
-    position: absolute;
-    width: 38%;
-    top: 61px;
-    right: 46px;
-    transform: rotate(251deg);
-  }
-  .title_delivery {
-    font-style: normal;
-    font-weight: 900;
-    font-size: 26px;
-    line-height: 90%;
-    padding-right: 0;
-    max-width: 175px;
-    word-spacing: -1px;
-  }
-  .sign_slide_two {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 13px;
-    line-height: 90%;
-    position: relative;
-    top: 43px;
-    letter-spacing: -1.5px;
-  }
-  .delivery {
-    top: 364%;
-  }
-  .text_slide_two {
-    left: 6px;
-    top: 0px;
-  }
-  .pils_right_slide_two_min {
-    top: 11px;
-    left: 15px;
-  }
-  .sheet_right_slide_two {
-    position: absolute;
-    width: 38%;
-    top: 63px;
-    right: 57px;
-    transform: rotate(251deg);
-  }
-  .content_information {
-    padding: 41px 0 0 27px;
-  }
-  .additional_information {
-    top: 470%;
-  }
-  .requisites_text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 10px;
-    line-height: 104%;
-    letter-spacing: -0.05em;
-  }
-  .warning_text {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 26px;
-    padding-right: 33px;
-    line-height: 100%;
-    letter-spacing: -2.7px;
-  }
-  .limitation {
-    height: 28px;
-    width: 28px;
-    right: 29px;
-    bottom: 5px;
-    position: absolute;
-  }
-  .sheet_right,
-  .sheet_right_slide_two {
-    animation: sheet_move_right 2s;
-    animation-fill-mode: forwards;
-    animation-iteration-count: infinite;
-  }
 }
