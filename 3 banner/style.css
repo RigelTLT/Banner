@@ -1,15 +1,16 @@
 html {
-  background-color: #558324;
-  width: 100%;
-  height: 100%;
+  background: #303030;
 }
 body {
   display: flex;
-  width: 100%;
-  height: 100%;
   margin: 0;
   justify-content: center;
-  overflow: hidden;
+}
+.banner {
+  overflow: clip;
+  background-color: #558324;
+  height: 600px;
+  width: 300px;
 }
 .container {
   width: 100%;
@@ -209,11 +210,11 @@ body {
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
 }
-.yandex_logo,
 .product,
 .delivery,
 .additional_information {
   position: relative;
+  height: 600px;
   animation: slideshow 5s;
   animation-fill-mode: forwards;
   opacity: 0;
@@ -236,10 +237,10 @@ body {
     transform: translateY(0%);
   }
   33% {
-    transform: translateY(-175%);
+    transform: translateY(-665.88px);
   }
   66% {
-    transform: translateY(-375%);
+    transform: translateY(-1331.76px);
   }
   100% {
     transform: translateY(0%);
