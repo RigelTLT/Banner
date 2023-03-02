@@ -67,11 +67,6 @@ p {
     width: 100%;
   }
 }
-@media (max-height: 599px) {
-  .three {
-    height: 100%;
-  }
-}
 @font-face {
   font-family: "Yandex Sans Text";
   src: url("./3 banner/assets/fonts/YandexSansText-Bold.eot");
