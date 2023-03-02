@@ -1,15 +1,16 @@
 html {
-  background-color: #558324;
-  width: 100%;
-  height: 100%;
+  background: #303030;
 }
 body {
   display: flex;
-  width: 100%;
-  height: 100%;
   margin: 0;
   justify-content: center;
-  overflow: hidden;
+}
+.banner {
+  overflow: clip;
+  background-color: #558324;
+  height: 180px;
+  width: 540px;
 }
 .container {
   width: 100%;
@@ -22,27 +23,22 @@ body {
   animation-iteration-count: infinite;
 }
 .container_content {
-  max-height: 250px;
+  max-height: 180px;
 }
 .yandex_logo {
   display: flex;
   flex-direction: row;
   justify-content: center;
-  top: 132%;
-  align-items: flex-end;
-  padding-top: 10px;
+  align-items: center;
 }
 
-.additional_information {
-  top: 458%;
-}
 .product {
-  top: 241%;
   display: flex;
   flex-direction: row;
   align-content: center;
   align-items: center;
-  padding-left: 24px;
+  left: 25px;
+  justify-content: center;
 }
 .yandex {
   padding: 6px 13.19px 0 0;
@@ -58,9 +54,9 @@ body {
 }
 
 .sheet_right {
-  position: absolute;
-  top: 50px;
-  right: 15px;
+  position: relative;
+  top: 18px;
+  right: 38px;
 }
 .img {
   margin-bottom: -16px;
@@ -69,7 +65,7 @@ body {
 .pils_right {
   position: relative;
   z-index: 100;
-  right: 3px;
+  left: 13px;
 }
 .text {
   display: flex;
@@ -85,7 +81,7 @@ body {
   line-height: 90%;
   color: #ffffff;
   margin: 0;
-  padding: 47px 0px 0 6px;
+  padding: 42px 0px 0 5px;
   max-width: 270px;
 }
 .title_delivery {
@@ -109,23 +105,23 @@ body {
   display: flex;
   align-items: center;
   color: #ffffff;
-  margin: 28px 0 0 5px;
+  margin: 28px 0 0 3px;
   opacity: 0.5;
   letter-spacing: -2px;
 }
 .delivery {
-  top: 358%;
   display: flex;
   flex-direction: row;
   align-content: center;
   align-items: center;
+  justify-content: center;
   padding-left: 20px;
 }
 .left_img_slide_two {
   margin-bottom: -3px;
 }
 .sheet_right_slide_two {
-  padding-top: 23px;
+  padding-top: 38px;
   position: relative;
   z-index: -100;
   right: 15px;
@@ -136,11 +132,10 @@ body {
 .text_slide_two {
   position: relative;
   left: 9px;
-  top: 3px;
+  top: 15px;
 }
 .pils_right_slide_two {
   position: relative;
-  bottom: 12px;
   left: 34px;
 }
 .sign_slide_two {
@@ -158,6 +153,7 @@ body {
   justify-content: flex-start;
   align-items: flex-end;
 }
+
 .content_information {
   padding: 32px 0 0 33px;
   display: flex;
@@ -236,10 +232,16 @@ body {
 .delivery,
 .additional_information {
   position: relative;
+  height: 180px;
   animation: slideshow 5s;
   animation-fill-mode: forwards;
   opacity: 0;
   animation-iteration-count: infinite;
+}
+.product,
+.delivery,
+.additional_information {
+  padding-top: 50px;
 }
 .pils_right_min,
 .pils_right_slide_two_min {
@@ -259,19 +261,19 @@ body {
 
 @keyframes move {
   0% {
-    transform: translateY(0%);
+    transform: translateY(0px);
   }
   25% {
-    transform: translateY(-175%);
+    transform: translateY(-230px);
   }
   50% {
-    transform: translateY(-375%);
+    transform: translateY(-460px);
   }
   75% {
-    transform: translateY(-575%);
+    transform: translateY(-690px);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(0px);
   }
 }
 @keyframes logo {
@@ -308,6 +310,9 @@ body {
   }
 }
 @media (max-width: 539px) {
+  .banner {
+    width: 100%;
+  }
   .pils_right,
   .pils_right_slide_two {
     display: none;
@@ -317,9 +322,6 @@ body {
     display: block;
     position: relative;
     z-index: 100;
-  }
-  .yandex_logo {
-    top: 128%;
   }
   .yandex {
     width: 36%;
@@ -331,6 +333,9 @@ body {
   .market {
     width: 37%;
     padding: 0px 0 0 8.3px;
+  }
+  .product {
+    left: 57px;
   }
   .text {
     max-width: 187px;
@@ -349,17 +354,14 @@ body {
     top: 22px;
     margin: 29px 41px 0px 1px;
   }
-  .product {
-    top: 251%;
-  }
   .pils_right_min {
-    right: 3px;
+    left: 17px;
   }
   .sheet_right {
-    position: absolute;
-    width: 38%;
-    top: 61px;
-    right: 46px;
+    position: relative;
+    width: 117px;
+    top: 38px;
+    right: 138px;
     transform: rotate(251deg);
   }
   .title_delivery {
@@ -381,28 +383,27 @@ body {
     letter-spacing: -1.5px;
   }
   .delivery {
-    top: 364%;
+    top: 0px;
+    left: 36px;
   }
   .text_slide_two {
     left: 6px;
-    top: 0px;
+    top: -8px;
+    min-width: 154px;
   }
   .pils_right_slide_two_min {
-    top: 11px;
-    left: 15px;
+    top: 0px;
+    left: 36px;
   }
   .sheet_right_slide_two {
-    position: absolute;
-    width: 38%;
-    top: 63px;
-    right: 57px;
+    position: relative;
+    width: 117px;
+    top: 45px;
+    right: 135px;
     transform: rotate(251deg);
   }
   .content_information {
-    padding: 41px 0 0 27px;
-  }
-  .additional_information {
-    top: 470%;
+    padding: 25px 0 0 27px;
   }
   .requisites_text {
     font-style: normal;
@@ -423,7 +424,7 @@ body {
     height: 28px;
     width: 28px;
     right: 29px;
-    bottom: 5px;
+    bottom: 28px;
     position: absolute;
   }
   .sheet_right,

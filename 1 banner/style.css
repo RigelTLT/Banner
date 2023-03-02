@@ -20,9 +20,6 @@ body {
   animation-timing-function: steps(1);
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-  /*animation: move 1s;
-  animation-timing-function: steps(1);
-  animation-fill-mode: forwards;*/
 }
 .container_content {
   max-height: 250px;
@@ -264,10 +261,10 @@ body {
 .additional_information {
   position: relative;
   height: 250px;
-  /*opacity: 0;
+  opacity: 0;
   animation: slideshow 5s;
   animation-fill-mode: forwards;
-  animation-iteration-count: infinite;*/
+  animation-iteration-count: infinite;
 }
 .product,
 .delivery {
@@ -308,9 +305,6 @@ body {
   100% {
     transform: translateY(0px);
   }
-  /*100% {
-    transform: translateY(-900px);
-  }*/
 }
 @keyframes logo {
   from {
@@ -334,7 +328,7 @@ body {
   }
 }
 
-@media (max-width: 2798px) {
+@media (max-width: 2799px) {
   .banner {
     width: 100%;
   }
