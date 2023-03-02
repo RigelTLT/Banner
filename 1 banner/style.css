@@ -1,15 +1,16 @@
 html {
-  background-color: #558324;
-  width: 100%;
-  height: 100%;
+  background: #303030;
 }
 body {
   display: flex;
-  width: 100%;
-  height: 100%;
   margin: 0;
   justify-content: center;
-  overflow: hidden;
+}
+.banner {
+  overflow: clip;
+  background-color: #558324;
+  height: 250px;
+  width: 2800px;
 }
 .container {
   display: flex;
@@ -19,40 +20,26 @@ body {
   animation-timing-function: steps(1);
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
+  /*animation: move 1s;
+  animation-timing-function: steps(1);
+  animation-fill-mode: forwards;*/
 }
 .container_content {
   max-height: 250px;
 }
 .yandex_logo {
-  position: relative;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  top: 135%;
-  animation: slideshow 5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
 }
-.product,
-.delivery,
-.additional_information {
-  position: relative;
-  opacity: 0;
-  animation: slideshow 5s;
-  animation-fill-mode: forwards;
-  animation-iteration-count: infinite;
-}
-.additional_information {
-  top: 446%;
-}
+
 .product {
-  top: 234%;
   display: flex;
   flex-direction: row;
-  align-content: center;
   align-items: center;
-  padding-left: 63px;
+  justify-content: center;
+  padding-right: 74px;
 }
 .yandex {
   padding: 17px 36.33px 0 0;
@@ -78,7 +65,9 @@ body {
 .sheet_left,
 .sheet_right,
 .sheet_right_slide_two,
-.sheet_left_slide_two {
+.sheet_left_slide_two,
+.sheet_left_min,
+.sheet_left_slide_two_min {
   animation: sheet_move 2s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
@@ -97,6 +86,7 @@ body {
   z-index: 100;
   right: 17px;
 }
+
 .sheet_right {
   padding-top: 40px;
   margin-left: 146px;
@@ -145,25 +135,12 @@ body {
   opacity: 0.5;
   letter-spacing: -3px;
 }
-.sign_slide_two {
-  font-family: "Yandex Sans Text";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 26px;
-  line-height: 90%;
-  display: flex;
-  align-items: center;
-  color: #ffffff;
-  margin: 51px 0 0 0;
-  opacity: 0.5;
-  letter-spacing: -3px;
-}
 .delivery {
-  top: 335%;
   display: flex;
   flex-direction: row;
   align-content: center;
   align-items: center;
+  justify-content: center;
   padding-left: 20px;
 }
 .left_img_slide_two {
@@ -196,11 +173,32 @@ body {
   z-index: 100;
   right: 142px;
 }
+
 .sheet_right_slide_two {
   padding-top: 40px;
   margin-left: 22px;
   position: absolute;
   z-index: -1;
+}
+.sign_slide_two {
+  font-family: "Yandex Sans Text";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 26px;
+  line-height: 90%;
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  margin: 51px 0 0 0;
+  opacity: 0.5;
+  letter-spacing: -3px;
+}
+.additional_information {
+  padding-top: 82px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 0 auto;
 }
 .information {
   display: flex;
@@ -243,6 +241,7 @@ body {
   color: #ffffff;
   opacity: 0.5;
   padding-left: 17px;
+  max-width: 2021px;
 }
 .warning_text {
   font-family: "Yandex Sans Text";
@@ -254,10 +253,32 @@ body {
   text-transform: uppercase;
   color: #ffffff;
   margin: 0;
-  padding-left: 9px;
+  padding-right: 122px;
   opacity: 0.5;
   padding-top: 12px;
   word-spacing: 1px;
+}
+.yandex_logo,
+.product,
+.delivery,
+.additional_information {
+  position: relative;
+  height: 250px;
+  /*opacity: 0;
+  animation: slideshow 5s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;*/
+}
+.product,
+.delivery {
+  padding-top: 50px;
+}
+.pils_right_min,
+.pils_right_slide_two_min,
+.sheet_left_min,
+.sheet_left_slide_two_min,
+.Gold_text {
+  display: none;
 }
 @keyframes slideshow {
   0% {
@@ -273,20 +294,23 @@ body {
 
 @keyframes move {
   0% {
-    transform: translateY(0%);
+    transform: translateY(0px);
   }
   25% {
-    transform: translateY(-175%);
+    transform: translateY(-300px);
   }
   50% {
-    transform: translateY(-375%);
+    transform: translateY(-600px);
   }
   75% {
-    transform: translateY(-575%);
+    transform: translateY(-900px);
   }
   100% {
-    transform: translateY(0%);
+    transform: translateY(0px);
   }
+  /*100% {
+    transform: translateY(-900px);
+  }*/
 }
 @keyframes logo {
   from {
@@ -307,6 +331,194 @@ body {
   }
   100% {
     transform: rotate(0deg);
+  }
+}
+
+@media (max-width: 2798px) {
+  .banner {
+    width: 100%;
+  }
+  .yandex {
+    width: 28%;
+    padding: 2px 19.79px 0px 0px;
+  }
+  .logo {
+    width: 9.5%;
+    padding-bottom: 8px;
+  }
+  .market {
+    width: 28%;
+    padding: 5px 0 0 20px;
+  }
+  .product {
+    padding-left: 125px;
+  }
+  .text {
+    align-items: center;
+    right: 0px;
+    padding-left: 59px;
+  }
+  .title_product {
+    font-weight: 900;
+    font-size: 70px;
+    line-height: 90%;
+    text-align: center;
+    padding: 47px 0 0 0;
+    position: relative;
+    right: 16px;
+    max-width: 370px;
+  }
+  .sign_slide_one {
+    font-weight: 400;
+    font-size: 22px;
+    letter-spacing: -3px;
+    line-height: 90%;
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    margin: 30px 41px 0 0;
+  }
+  .sheet_left,
+  .pils_right,
+  .pils_left_slide_two,
+  .sheet_right_slide_two,
+  .sheet_left_slide_two,
+  .pils_left,
+  .sheet_right,
+  .pils_right_slide_two,
+  .sign_slide_two {
+    display: none;
+  }
+  .sheet_left_min {
+    display: block;
+    position: relative;
+    right: -2px;
+    padding-top: 50px;
+  }
+  .pils_right_min {
+    display: block;
+    position: relative;
+    z-index: 100;
+    right: 20px;
+  }
+  .right_img {
+    margin-bottom: 3px;
+  }
+  .left_img {
+    margin-bottom: -1px;
+  }
+  .text_Omega3 {
+    display: none;
+  }
+  .delivery {
+    padding-left: 40px;
+  }
+  .pils_right_slide_two_min {
+    display: block;
+    top: 4px;
+    position: relative;
+    right: 17px;
+  }
+  .sheet_left_slide_two_min {
+    position: relative;
+    display: block;
+    top: 30px;
+  }
+  .title_delivery {
+    font-size: 48px;
+    line-height: 90%;
+    text-align: center;
+    font-feature-settings: "pnum" on, "lnum" on;
+    padding-top: 13px;
+    padding-right: 0px;
+    min-width: 450px;
+    word-spacing: -3px;
+    color: #ffffff;
+  }
+  .Gold_text {
+    display: block;
+    font-family: "Yandex Sans Text";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 90%;
+    display: flex;
+    color: #ffffff;
+    opacity: 0.5;
+    position: relative;
+    top: 52px;
+    right: 2px;
+    letter-spacing: -2.5px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  .text_slide_two {
+    right: 0px;
+    padding-top: 9px;
+  }
+  .additional_information {
+    top: 0px;
+    padding-left: 49px;
+    padding-top: 35px;
+  }
+  .requisites_text {
+    font-size: 18px;
+    line-height: 117%;
+    letter-spacing: -1px;
+    margin: 0;
+    max-width: 74%;
+    padding-left: 0px;
+    padding-top: 67px;
+  }
+  .limitation {
+    height: 63px;
+    width: 66px;
+    opacity: 0.5;
+    border: 3.46698px solid #ffffff;
+    border-radius: 70px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    justify-content: center;
+    top: 195.32px;
+    right: 47.78px;
+    margin: 0;
+  }
+  .limitation_text {
+    font-family: "Yandex Sans Text";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32.6327px;
+    line-height: 38px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-feature-settings: "pnum" on, "lnum" on;
+    color: #ffffff;
+  }
+
+  .warning_text {
+    font-family: "Yandex Sans Text";
+    font-style: normal;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 52px;
+    line-height: 100%;
+    display: flex;
+    align-items: center;
+    letter-spacing: -5.5px;
+    text-transform: uppercase;
+    color: #ffffff;
+    opacity: 0.5;
+    margin: 0;
+    padding-top: 12px;
+    word-spacing: 1px;
+    max-width: 74%;
+    padding-top: 32px;
+  }
+  .warning {
+    height: 130px;
   }
 }
 @font-face {
