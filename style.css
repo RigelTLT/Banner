@@ -26,10 +26,6 @@ p {
   width: 2800px;
   height: 250px;
 }
-.one_adptive {
-  width: 850px;
-  height: 250px;
-}
 .one_min {
   width: 850px;
   height: 250px;
@@ -46,7 +42,36 @@ p {
   width: 300px;
   height: 600px;
 }
-
+@media (max-width: 2799px) {
+  .one_max {
+    width: 100%;
+  }
+}
+@media (max-width: 849px) {
+  .one_min {
+    width: 100%;
+  }
+}
+@media (max-width: 539px) {
+  .two_max {
+    width: 100%;
+  }
+}
+@media (max-width: 319px) {
+  .two_min {
+    width: 100%;
+  }
+}
+@media (max-width: 299px) {
+  .three {
+    width: 100%;
+  }
+}
+@media (max-height: 599px) {
+  .three {
+    height: 100%;
+  }
+}
 @font-face {
   font-family: "Yandex Sans Text";
   src: url("./3 banner/assets/fonts/YandexSansText-Bold.eot");
